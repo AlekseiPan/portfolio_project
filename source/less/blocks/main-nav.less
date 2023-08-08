@@ -1,0 +1,256 @@
+.main-nav {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-nav__logo {
+  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    order: -2;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.main-nav__shortcut-logo img {
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
+}
+
+.main-nav__caption-logo {
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.main-nav__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-nav__shortcut-sign-in,
+.main-nav__shortcut-order {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: @base-primary;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__shortcut-sign-in,
+  .main-nav__shortcut-order {
+    min-height: 80px;
+    padding: 10px;
+    margin-left: 20px;
+
+    &:hover {
+      color: @base-primary;
+    }
+  }
+
+  .main-nav__shortcut-sign-in {
+    width: 112px;
+  }
+
+  .main-nav__shortcut-order {
+    width: 129px;
+  }
+}
+
+.main-nav__sign-in,
+.main-nav__order,
+.main-nav__menu-link {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.main-nav__caption-sign-in,
+.main-nav__caption-order {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.main-nav__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: -1;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.main-nav__menu-item {
+  position: relative;
+}
+
+.main-nav__menu-item::before,
+.main-nav__menu-item::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  top: 0px;
+  background-color: @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__menu-item::before {
+  left: 0;
+}
+
+.main-nav__menu-item::after {
+  right: 0;
+}
+
+.main-nav__menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+  padding: 8px 20px;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 10px;
+    width: 103px;
+    min-height: 80px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @base-primary;
+    }
+  }
+}
+
+.main-nav__menu-link--active {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @base-primary;
+    color: @base-primary;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  background-color: @white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  cursor: pointer;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 1.5px;
+  top: 25px;
+  left: 22px;
+  background-color: @base-black;
+  box-shadow: 0 3.75px 0 0 @base-black, 0 7.5px 0 0 @base-black;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 22px;
+  right: 22px;
+  background-color: transparent;
+  background-image: url(../../img/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main-nav--closed .main-nav__menu-list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__menu-list {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}

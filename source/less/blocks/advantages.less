@@ -1,0 +1,111 @@
+.advantages {
+  padding: 50px 20px 60px;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 20px 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 40px 96px;
+  }
+}
+
+.advantages__main-header {
+  margin: 0 0 36px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+.advantages__item {
+  padding-top: 66px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 45px 0 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 76px 35px 0;
+  }
+}
+
+.advantages__item:not(:last-child) {
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__header {
+  position: relative;
+  margin: 0 0 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.advantages__header::before {
+  content: "";
+  position: absolute;
+  width: 52px;
+  height: 56px;
+  top: -62px;
+  left: calc(50% - 28px);
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: -72px;
+    background-position: left top;
+    background-position: center top;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -62px;
+    left: calc(50% - 28px);
+  }
+}
+
+.advantages__header--speed::before {
+  background-image: url("../../img/advantages/speed.svg");
+}
+.advantages__header--fit::before {
+  background-image: url("../../img/advantages/fit.svg");
+}
+.advantages__header--energy::before {
+  background-image: url("../../img/advantages/energy.svg");
+}
+.advantages__header--eco::before {
+  background-image: url("../../img/advantages/eco.svg");
+}

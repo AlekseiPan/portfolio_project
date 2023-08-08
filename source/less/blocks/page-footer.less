@@ -1,0 +1,137 @@
+.page-footer {
+  padding: 22px 20px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 42px 20px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+}
+
+.page-footer__logo img {
+  display: block;
+  width: 82px;
+  height: 36px;
+  margin-bottom: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 170px;
+    height: 36px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.page-footer__caption-logo {
+  display: none;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 50px;
+    padding-bottom: 0;
+  }
+}
+
+.page-footer__social::before,
+.page-footer__social::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  bottom: 0;
+  background-color: @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__social::before {
+  left: 0;
+}
+
+.page-footer__social::after {
+  right: 0;
+}
+
+.page-footer__about {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    column-gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    padding-bottom: 0;
+  }
+}
+
+.page-footer__copyright {
+  font-size: 12px;
+  line-height: 16px;
+  color: @base-grey;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 3px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.page-footer__copyright-link {
+  padding-right: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
