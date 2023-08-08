@@ -15,15 +15,14 @@
   <link rel="preload" href=".fonts/Montserrat-Bolb.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href=".fonts/Montserrat-Bolb.woff" as="font" type="font/woff" crossorigin>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
   <header class="page-header center">
-    <!-- Классы main-nav--closed, main-nav--opened и main-nav--nojs задействованы в переключении состояния меню и внешний вид кнопки -->
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__logo">
         <a class="main-nav__shortcut-logo">
@@ -76,7 +75,7 @@
 
   <main class="page-main">
     <h1 class="page-main__header visually-hidden">Интернет-магазин по продаже кофейных напитков Drink2Go</h1>
-    <section class="slider swiper mySwiper">
+    <div class="slider swiper mySwiper">
       <ul class="slider__list swiper-wrapper">
         <li class="slider__item slider__item--first swiper-slide">
           <div class="slider__wrapper center">
@@ -180,7 +179,7 @@
           <use xlink:href="img/icons/stack.svg#slider-arrow-left"></use>
         </svg>
       </button>
-    </section>
+    </div>
     <section class="advantages center">
       <span class="badge">Преимущества</span>
       <h2 class="header-2 advantages__main-header">
@@ -223,11 +222,11 @@
                       <div class="range-filter__bar" style="
                             width: 86%; margin-left: 0%;"></div>
                       <div class="range-filter__toggle range-filter__toggle--min" tabindex="0" style="left: 0%"
-                        aria-label="Левая ручка диапазона цены">
+                        aria-label="Регулировать минимальную цену">
                         <div class="range-filter__toggle-hover"></div>
                       </div>
                       <div class="range-filter__toggle range-filter__toggle--max" tabindex="0" style="left:86%"
-                        aria-label="Правая ручка диапазона цены">
+                        aria-label="Регулировать максимальную цену">
                         <div class="range-filter__toggle-hover"></div>
                       </div>
                     </div>
