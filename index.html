@@ -446,33 +446,31 @@
 
         <section class="pagination">
           <h3 class="visually-hidden">Навигация по страницам</h3>
-          <ul class="pagination__list">
-            <li class="pagination__item">
-              <a class="button pagination__button pagination__button--arrow-left" href="/">
-                <svg class="pagination__picture-link" width="6" height="10" fill="#7859CF" aria-label="Листать влево">
-                  <use xlink:href="img/icons/stack.svg#pagination-arrow-left"></use>
-                </svg>
-                <span class="pagination__caption-link">Назад</span>
-              </a>
-            </li>
-            <li class="pagination__item">
-              <a class="button pagination__button" href="/">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="button pagination__button pagination__button--current" href="/">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="button pagination__button" href="/">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="button pagination__button pagination__button--arrow-right" href="/">
-                <svg class="pagination__picture-link" width="6" height="10" fill="#7859CF" aria-label="Листать вправо">
-                  <use xlink:href="img/icons/stack.svg#pagination-arrow-left"></use>
-                </svg>
-                <span class="pagination__caption-link">Вперед</span>
-              </a>
-            </li>
-          </ul>
+          <div class="pagination__buttons">
+            <a class="button pagination__button pagination__button--arrow-left" href="/">
+              <svg class="pagination__picture-link" width="6" height="10" fill="#7859CF" aria-label="Листать влево">
+                <use xlink:href="img/icons/stack.svg#pagination-arrow-left"></use>
+              </svg>
+              <span class="pagination__caption-link">Назад</span>
+            </a>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="button pagination__button" href="/">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="button pagination__button pagination__button--current" href="/">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="button pagination__button" href="/">3</a>
+              </li>
+            </ul>
+            <a class="button pagination__button pagination__button--arrow-right" href="/">
+              <svg class="pagination__picture-link" width="6" height="10" fill="#7859CF" aria-label="Листать вправо">
+                <use xlink:href="img/icons/stack.svg#pagination-arrow-left"></use>
+              </svg>
+              <span class="pagination__caption-link">Вперед</span>
+            </a>
+          </div>
         </section>
       </section>
     </div>
@@ -541,7 +539,7 @@
             <a class="internet-store__link" href="/">Доставка</a>
           </li>
           <li class="internet-store__item">
-            <a class="internet-store__link" href="/">Способы доставки</a>
+            <a class="internet-store__link" href="/">Способы оплаты</a>
           </li>
           <li class="internet-store__item">
             <a class="internet-store__link" href="/">О нас</a>
